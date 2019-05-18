@@ -1,0 +1,14 @@
+{
+  "rapid7-api-key": "",
+  "cmocl-api-url": "",
+  "cmocl-api-key": "",
+  "storage-path": "",
+  "smtp-host": "",
+  "smtp-port": 465,
+  "smtp-user": "",
+  "smtp-pass": "",
+  "smtp-from": "",
+  "smtp-to": "",
+  "ct-log-url": "ct.googleapis.com/rocketeer",
+  "ct-last-entry": 0
+}
