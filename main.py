@@ -176,6 +176,7 @@ try:
     ct_entries = ct_client.get_log_size()
 
     # Download new certificates
+    print("Certificate Transparency monitor")
     print("Downloading "+str(ct_entries-ct_last_entry)+" entries from CT")
     temp_path = join(temporary_path, str(ct_last_entry)+"-"+str(ct_entries)+".json")
     ret = ct_client.download(ct_last_entry, ct_entries, temp_path)
@@ -230,7 +231,7 @@ try:
                 if not res:
                     logging.error("Cannot upload results to CMoCL, Rapid7 " + d.isoformat() + ".")
                 else:
-                    print("Rapid7 " + d.isoformat() + " successfully processed.\n")
+                    print("CT " + d.isoformat() + " successfully processed.\n")
                     os.remove(path)
             except CMoCLError as e:
                 logging.error("A critical error occurs during communication with CMoCL, CT " + d.isoformat() + ": ")
